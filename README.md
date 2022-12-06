@@ -19,3 +19,9 @@ Practica de conceptos de html, css. Proyecto de entrega para el diplomado.
 
 ## En cada archivo.html se encuentra la opción de descargar la hoja de vida.pdf o de visualizar el pdf en el navegador
 
+## Construido con :wrench:
+
+- Visual Studio Code 
+
+## Por Faber Fernández :building_construction:
+
