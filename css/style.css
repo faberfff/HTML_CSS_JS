@@ -1,0 +1,222 @@
+@import"https://pro.fontawesome.com/releases/v5.10.0/css/all.css";
+/*la primera linea importa el fontawesome que sirve para colocar los iconos de redes sociales al caodigo*/
+
+*{
+   /* border-style: dashed;*/
+   /* padding: 10px;*/
+    box-sizing: border-box;
+   /* margin: 0;*/
+}
+
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0;
+
+}
+
+a{
+    text-decoration: none;
+}
+
+.container{
+    /*background: #000;*/
+    display: grid;
+    grid-template-areas: 
+    'header header header'
+    'nav nav nav'
+    'slider slider slider'
+    'section section section'
+    'footer footer footer';
+    column-gap: 10px;
+    align-items: center;
+}
+
+.header{
+    /*background: rgb(206, 9, 9);*/
+    grid-area: header;
+    background: #3d9dd8;
+    color: #ffffff;
+}
+    .nav1{
+        padding: 10px;
+        /*margin-left: 20px;*/
+    }
+    nav1 i{
+        margin-left: 20px;
+    }
+
+.nav{
+    /*background: rgb(19, 140, 149);*/
+    background: #ffffff;
+    grid-area: nav;
+    width: 80%;
+    margin: auto;
+}
+
+  .menu{
+      /* background: rgb(19, 65, 149);*/
+      display: grid;
+      grid-template-columns: 1fr 3fr 1fr;
+      align-items: center;
+
+   }
+     .logo{
+         /*background: rgb(166, 214, 6);*/
+         background: #ffffff;
+     }
+          .logo img{
+              width: 80%;
+
+          }
+           .nav2 ul{
+               display: flex;
+               list-style: none;
+               align-content: center;
+           }
+           .nav2 a{
+               color: #333;
+               padding: 10px 12px;
+               font-weight: bold;
+               text-align: center;
+               line-height: 20px;
+               overflow-wrap: break-word;
+           }
+           .nav2 a:hover{
+               color: orange;
+           }
+   
+           .button{
+            background: rgb(119, 190, 5);
+            border: none;
+            border-radius: 20px;
+            color: #ffffff;
+            font-weight: bold;
+            padding-left: 15px;
+            padding-right: 15px;
+           }
+.slider{
+    /*background: rgb(202, 156, 6);*/
+    grid-area: slider;
+    
+    background: url(../img/FormularioIuDigital.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 600px;
+}     
+
+.section{
+    /*background: rgb(165, 153, 47);*/
+    background: #ffffff;
+    grid-area: section;
+    
+}
+    .articles{
+        /*background: rgb(161, 15, 76);*/
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 40px;
+      width: 80%;
+      margin: 0 auto;
+      padding: 10px;
+      
+    }
+        .article{
+           /*background: rgb(71, 163, 34);*/
+            border-radius: 15;
+                
+        }
+        .article span{
+            color: #3d9dd8;
+            font-weight: 100;
+            font-size: small;
+            margin-right: 20px;
+        }
+        .article a{
+            background: rgb(119, 190, 5);
+            border: none;
+            border-radius: 20px;
+            color: #ffffff;
+            font-weight: bold;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        .article img{
+
+            width: 100%;
+            border-radius: 15px;
+            opacity: 0.9;
+
+            transition: transform 2s; /*linea para dar efecto visual a las imagenes de estar saliendose del controno y entrandose del mismo*/
+
+            transition: opacity 1s ease-in-out;/*linea para dar efecto visual de que el color de la imagen cambia cuando se pasa en cursor por ensima en determinado tiempo*/
+        }
+        .article img:hover{
+            transform: scale(1.1);
+            opacity: 1;
+        }
+        .article .img{
+            overflow: hidden;
+        }
+.footer{
+    /*background: rgb(25, 18, 114);*/
+    grid-area: footer;
+    background: #3d9dd8;
+    align-content: center;
+    align-items: center;
+}        
+     .foot{
+         /*background: rgb(136, 63, 63);*/
+         color: #ffffff;
+         text-align: center;
+         height: auto;
+         padding: 20px;
+
+     }
+
+     /*media querys, es para hacer responsivo la pagina*/
+
+     @media all and(max-width: 768px){
+         .menu{
+             display: grid;
+             grid-template-columns: auto auto auto;
+             align-items: center;
+         }
+
+         .articles{
+             display: grid;
+             grid-template-columns: auto auto;
+             grid-template-rows: auto auto;
+             grid-gap: 5px;
+             width: 100%;
+             margin: 0 auto;
+             padding: 10px;
+
+         }
+    }
+     @media all and(max-width: 375px) {
+         .menu{
+            align-items: left;
+         }
+         .logo{
+             display: none;
+         }
+         .nav{
+             width: 100%;
+             margin: auto;
+         }
+         .nav2 ul{
+             display: flex;
+             flex-direction: row;
+             flex-wrap: wrap;
+             margin: 0;
+             text-align: center;
+         }
+         .nav2 a{
+             font-weight: lighter;
+             text-align: left;
+             white-space: nowrap;
+         }
+
+     }
+     
